@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe';
-import { differenceInHours } from 'date-fns';
+import { addHours, isAfter } from 'date-fns';
 
 import AppError from '@shared/errors/AppError';
 import IUsersRepository from '../repositories/IUsersRepository';
@@ -40,8 +40,9 @@ class ResetPasswordService {
     }
 
     const tokenCreatedAt = userToken.created_at;
+    const compareDate = addHours(tokenCreatedAt, 2);
 
-    if (differenceInHours(Date.now(), tokenCreatedAt) > 2) {
+    if (isAfter(Date.now(), compareDate)) {
       throw new AppError('Token expired');
     }
 
