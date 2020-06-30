@@ -5,7 +5,6 @@ import multer from 'multer';
 const tmpFolder = path.resolve(__dirname, '..', '..', 'tmp');
 
 export default {
-  directory: tmpFolder,
   tmpFolder,
   uploadsFolder: path.resolve(tmpFolder, 'uploads'),
 
@@ -19,5 +18,3 @@ export default {
     },
   }),
 };
-
-// resolver linnha 8
