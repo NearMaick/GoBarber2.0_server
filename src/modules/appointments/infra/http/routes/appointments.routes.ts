@@ -1,13 +1,13 @@
 import { Router } from 'express';
 
 import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
-import ProvidersController from '../controllers/ProvidersController';
+import AppointmentsController from '../controllers/AppointmentsContoller';
 
-const providersRouter = Router();
-const providersController = new ProvidersController();
+const appointmentsRouter = Router();
+const appointmentsController = new AppointmentsController();
 
-providersRouter.use(ensureAuthenticated);
+appointmentsRouter.use(ensureAuthenticated);
 
-providersRouter.get('/', providersController.index);
+appointmentsRouter.post('/', appointmentsController.create);
 
-export default providersRouter;
+export default appointmentsRouter;
