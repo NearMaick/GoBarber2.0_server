@@ -4,10 +4,8 @@
     "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./src",
-
     "strict": true,
     "strictPropertyInitialization": false,
-
     "baseUrl": "./src",
     "allowJs": true,
     "paths": {
@@ -16,10 +14,15 @@
       "@shared/*": ["shared/*"]
     },
     "esModuleInterop": true,
-
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude":[
+    "jest.config.js",
+    "prettier.config.js",
+    "node_modules",
+    "coverage",
+    "tmp"
+  ]
 }
