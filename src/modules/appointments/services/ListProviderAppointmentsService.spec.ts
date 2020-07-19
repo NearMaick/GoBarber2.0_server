@@ -5,6 +5,7 @@ import ListProviderAppointmentsService from './ListProviderAppointmentsService';
 let fakeAppointmentsRepository: FakeAppointmentsRepository;
 let fakeCacheProvider: FakeCacheProvider;
 let listProviderAppointments: ListProviderAppointmentsService;
+console.log('arrumar aqui');
 
 describe('ListProviderAppointmentsService', () => {
   beforeEach(() => {

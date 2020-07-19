@@ -6,6 +6,7 @@ let fakeUsersRepository: FakeUsersRepository;
 let fakeCacheProvider: FakeCacheProvider;
 let listProviders: ListProvidersService;
 
+console.log('arrumar aqui');
 describe('UpdateProfile', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
